@@ -20,3 +20,4 @@ npm run dev
 ```
 
 Video Link: https://drive.google.com/drive/folders/1oGWU9jyIP65zE3Dq86-KwBXCxy0KQEbQ?usp=sharing
+repo: https://github.com/GurjasChalana/fitness-club
