@@ -1,0 +1,40 @@
+Metadata-Version: 2.4
+Name: backend
+Version: 0.1.0
+Summary: Add your description here
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+Requires-Dist: asgiref>=3.8.1
+Requires-Dist: flask>=3.1.2
+Requires-Dist: flask-cors>=6.0.1
+Requires-Dist: psycopg2>=2.9.11
+Requires-Dist: sqlalchemy>=2.0.36
+Requires-Dist: python-dotenv>=1.0.1
+
+## Backend quickstart
+
+1. Create the database and load schema/data:
+   ```sh
+   createdb fitness_club
+   psql fitness_club -f ../SQL/DDL.sql
+   psql fitness_club -f ../SQL/DML.sql
+   ```
+2. Install deps (Python 3.12+):
+   ```sh
+   pip install -e app/backend
+   ```
+3. Run the API:
+   ```sh
+   # Run from the repo root so the `models/` package is discoverable
+   uvicorn app.backend.asgi:app --reload --env-file .env
+   # Or: python -m app.backend.main
+   ```
+
+The Flask API now uses SQLAlchemy ORM models (`models.py`) for all endpoints and serves member, trainer, and admin flows. CORS is enabled for localhost:5173 and localhost:3000. Key endpoints: member registration/profile/goals/metrics/classes/PT sessions/billing, trainer availability/schedule, and admin room/class/equipment/maintenance/billing management.
+
+### Authentication
+- HTTP Basic Auth is required on all endpoints except `/members/register`. Use `Authorization: Basic <base64(username:password)>`.
+- Default admin credentials: `admin` / `admin` (configurable via env).
+- Seeded demo users: members `alice|bob|carol` with password `password`; trainers `tom|lisa|mark` with password `password`.
+- Member registration payloads must include `username` and `password` along with profile fields.
+- If you already had a database, drop/recreate (or run `python main.py`) to pick up the new auth columns.

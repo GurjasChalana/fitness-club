@@ -1,0 +1,94 @@
+:root {
+  font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+  line-height: 1.6;
+  font-weight: 400;
+  color: #e2e8f0;
+  background-color: #0b1224;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: radial-gradient(circle at 20% 20%, rgba(14, 165, 233, 0.08), transparent 28%), #0b1224;
+}
+
+.container-narrow {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1rem 2rem;
+}
+
+.card {
+  border: 1px solid var(--muted-border-color);
+  border-radius: 12px;
+  padding: 1rem 1.25rem;
+  background: #ffffff;
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.12);
+  color: #0f172a;
+}
+
+.section {
+  margin: 1rem 0;
+}
+
+.stack {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.row {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.pill {
+  display: inline-block;
+  padding: 0.15rem 0.7rem;
+  border-radius: 999px;
+  background: var(--muted-border-color);
+  font-size: 0.9rem;
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+.muted {
+  color: var(--muted-color);
+}
+
+.nav-bar {
+  padding: 0.9rem 1.1rem;
+  border-radius: 14px;
+  background: var(--card-background-color);
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.18);
+}
+
+.result-item {
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid var(--muted-border-color);
+  border-radius: 10px;
+  padding: 0.55rem 0.8rem;
+}
+
+.card h2,
+.card h3,
+.card h4,
+.card p,
+.card h1,
+.card span,
+.card label {
+  color: #0f172a;
+}

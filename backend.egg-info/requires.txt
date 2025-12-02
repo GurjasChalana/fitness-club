@@ -1,0 +1,6 @@
+asgiref>=3.8.1
+flask>=3.1.2
+flask-cors>=6.0.1
+psycopg2>=2.9.11
+sqlalchemy>=2.0.36
+python-dotenv>=1.0.1

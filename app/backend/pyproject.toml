@@ -1,0 +1,27 @@
+[project]
+name = "backend"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "flask>=3.1.2",
+    "flask-cors>=6.0.1",
+    "psycopg2>=2.9.11",
+    "sqlalchemy>=2.0.36",
+    "python-dotenv>=1.0.1",
+]
+
+[project.scripts]
+start = "main:main"
+seed = "seed:seed"
+
+[tool.uv]
+package = true
+
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+py-modules = ["app", "db", "main", "seed"]
