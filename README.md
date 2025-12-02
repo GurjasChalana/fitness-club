@@ -18,3 +18,5 @@ npm install
 cp .env.example .env.local
 npm run dev
 ```
+
+Video Link: https://drive.google.com/drive/folders/1oGWU9jyIP65zE3Dq86-KwBXCxy0KQEbQ?usp=sharing
